@@ -3,7 +3,7 @@ import RINGS from 'vanta/dist/vanta.rings.min'
 import { bubble as Menu } from 'react-burger-menu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faHamburger } from "@fortawesome/free-solid-svg-icons"
+import Typewriter from 'typewriter-effect';
  
 export default class Home extends React.Component {
   constructor() {
@@ -31,23 +31,35 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <div>
-          <Menu>
-            <a id="home" className="menu-item" href="/">Home</a>
-            <a id="about" className="menu-item" href="/about">About</a>
-            <a id="contact" className="menu-item" href="/contact">Contact</a>
-            <a className="menu-item" href="">Settings</a>
-          </Menu>
-          <div ref={this.vantaRef} className="d-flex flex-column align-items-md-start align-items-center" style={{height: '100vh'}}>
-            <div className="text-light ml-md-5 font-mono" style={{marginTop: '5rem', fontSize: '5rem'}}>Roshita</div>
-            <div className="text-light ml-md-5 font-mono fs-14">Developer. Coding enthusiast.</div>
-            <div className="text-light ml-md-5 mt-2">
-              <a href="" className="text-light fs-14"><FontAwesomeIcon icon={faFacebook} /></a>
-              <a href="" className="text-light mx-3 fs-14"><FontAwesomeIcon icon={faInstagram} /></a>
-              <a href="" className="text-light fs-14"><FontAwesomeIcon icon={faGithub} /></a>
-              <a href="" className="text-light mx-3 fs-14"><FontAwesomeIcon icon={faLinkedin} /></a>
-            </div>
+      <div id="outer-container" style={{ height: '100%' }}>
+          <div>
+              <Menu pageWrapId={'page-wrap'}  outerContainerId={'outer-container'}>
+                <a id="home" className="menu-item" href="/">Home</a>
+                <a id="about" className="menu-item" href="/about">About</a>
+                <a id="contact" className="menu-item" href="/contact">Contact</a>
+                <a className="menu-item" href="">Settings</a>
+              </Menu>
           </div>
+            <main id="page-wrap">
+                <div ref={this.vantaRef} className="d-flex flex-column align-items-md-start align-items-center" style={{height: '100vh'}}> 
+                  <div className="text-light ml-md-5 font-mono" style={{marginTop: '8rem', fontSize: '5rem'}}>Roshita</div>  
+                  <div className="text-light ml-md-5 font-mono fs-14 mb-2">
+                    <Typewriter
+                          options={{
+                            strings: ['Developer. Coding enthusiast.'],
+                            autoStart: true,
+                            loop: true,
+                          }} 
+                        />
+                  </div>
+                  <div className="text-light ml-md-5 mt-2">
+                    <a href="" className="text-light fs-14"><FontAwesomeIcon icon={faFacebook} /></a>
+                    <a href="" className="text-light mx-3 fs-14"><FontAwesomeIcon icon={faInstagram} /></a>
+                    <a href="" className="text-light fs-14"><FontAwesomeIcon icon={faGithub} /></a>
+                    <a href="" className="text-light mx-3 fs-14"><FontAwesomeIcon icon={faLinkedin} /></a>
+                  </div>
+                </div>
+            </main>
       </div>
     )
   }
