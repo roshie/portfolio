@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
+body {
+  background-color: #131313;
+}
+
 .fs-14 {
   font-size: 20px;
 }
@@ -39,7 +43,7 @@
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #bbff00;
+  background: #12ffff;
 }
 
 /* Position and sizing of clickable cross button */
@@ -88,4 +92,35 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.822);
+}
+
+.menu-item {
+  text-decoration: none;
+  color: white;
+  font-family: monospace;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.menu-item:hover {
+  color: #12ffff;
+  transform: translateX(5%);
+  transition: transform 0.3s ease;
+}
+
+.socialIcons:hover {
+  color: #12ffff;
+}
+
+.avatar {
+  height: 15vh;
+}
+
+.ball-clip-rotate-multiple > div {
+  border-color: transparent #12ffff transparent #12ffff !important;
+}
+
+.ball-clip-rotate-multiple > div:last-child {
+  border-color: #12ffff transparent #12ffff transparent !important;
 }

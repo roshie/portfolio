@@ -1,35 +1,10 @@
 import React from "react" 
 import Menu from './Menu'
-import RINGS from 'vanta/dist/vanta.rings.min'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import Typewriter from 'typewriter-effect';
  
-export default class Home extends React.Component {
-  constructor() {
-    super()
-    this.vantaRef = React.createRef()
-  }
-  componentDidMount() {
-    this.vantaEffect = RINGS({
-        el: this.vantaRef.current,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 50.00,
-        minWidth: 50.00,
-        maxHeight: 100.00,
-        maxWidth: 100.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        backgroundColor: 0x131313,
-        color: 0x7500ff
-      })
-  }
-  componentWillUnmount() {
-    if (this.vantaEffect) this.vantaEffect.destroy()
-  }
-  render() {
+export default function About () {
+
     return ( 
       <Menu>
         <div ref={this.vantaRef} className="d-flex flex-column align-items-md-start align-items-center" style={{height: '100vh'}}> 
@@ -52,5 +27,5 @@ export default class Home extends React.Component {
         </div> 
       </Menu>
     )
-  }
+  
 }
