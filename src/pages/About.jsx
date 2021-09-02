@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSchool, faUniversity, faCertificate } from '@fortawesome/free-solid-svg-icons'
+import { faSchool, faUniversity, faCertificate, faBriefcase } from '@fortawesome/free-solid-svg-icons'
  
 export default function About () {
     const easing = [0.6, -0.05, 0.1, 0.99 ];
@@ -41,7 +41,7 @@ export default function About () {
                         </div> 
                         <div className="my-2 skills">
                             <a>Bootstrap</a> <a>Material UI</a> <a>Jquery</a> <a>Flask</a> 
-                            <a>Django</a> <a>FastAPI</a> <a>Flutter</a> <a>Android</a> 
+                            <a>Django</a> <a>FastAPI</a> <a>Flutter</a> <a>Android</a> <a>Redux</a> 
                         </div> 
                         <div className="my-2 skills">
                             <a>ReactJS</a> <a>Angular</a> <a>NodeJS</a> <a>ExpressJS</a> <a>NextJS</a> 
@@ -108,7 +108,7 @@ export default function About () {
                                     contentArrowStyle={{ borderRight: '7px solid  white' }}
                                     date="Jul 2021 - Aug 2021"
                                     iconStyle={{ background: '#131313', color: '#fff' }}
-                                    icon={<FontAwesomeIcon icon={faUniversity} />}
+                                    icon={<FontAwesomeIcon icon={faBriefcase} />}
                                 >
                                     <h3 className="font-weight-bold my-3">Web Developer</h3>
                                     <h5 className="vertical-timeline-element-subtitle">LICET</h5>
@@ -121,7 +121,7 @@ export default function About () {
                                     date="Feb 2021 - Jul 2021"
                                     contentStyle={{ background: '#131313', color: '#fff' }}
                                     iconStyle={{ background: '#131313', color: '#fff'}}
-                                    icon={<FontAwesomeIcon icon={faCertificate} />}
+                                    icon={<FontAwesomeIcon icon={faBriefcase} />}
                                 >
                                     <h3 className="font-weight-bold my-3">Web Developer</h3>
                                     <h5 className="vertical-timeline-element-subtitle">Onfluence, UK</h5>
@@ -134,7 +134,7 @@ export default function About () {
                                     date="Aug 2020 - Oct 2020"
                                     contentStyle={{ background: '#131313', color: '#fff' }}
                                     iconStyle={{ background: '#131313', color: '#fff' }}
-                                    icon={<FontAwesomeIcon icon={faSchool}/>}
+                                    icon={<FontAwesomeIcon icon={faBriefcase}/>}
                                 >
                                     <h3 className="font-weight-bold my-3">Web Developer</h3>
                                     <h5 className="vertical-timeline-element-subtitle">Pattarai</h5>
