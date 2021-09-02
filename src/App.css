@@ -20,6 +20,13 @@ body {
   margin-left: 5rem;
 }
 
+.ml-1 {
+  margin-left: 1rem;
+}
+.mr-1 {
+  margin-right: 1rem;
+}
+
 .about-content {
   padding: 0 5rem 0 5rem;
 }
@@ -177,8 +184,20 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin: 10px 3px 10px 3px;
   font-family: monospace;
   padding: 5px 10px 5px 10px;
+  cursor: default;
 }
 
 .skills > a:hover {
-  transform: scale(1.5);
+  background-color: #12ffff;
+  transition: all 0.3s ease;
+}
+
+.portfolio-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+.portfolio-item {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 3rem;
 }
