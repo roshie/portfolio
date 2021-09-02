@@ -21,10 +21,10 @@ body {
 }
 
 .ml-1 {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 .mr-1 {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .about-content {
@@ -37,6 +37,19 @@ body {
   }
   .about-content {
     padding: 0 0 0 0;
+  }
+  .ml-1 {
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+  }
+  .mr-1 {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+  .portfolio-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0rem !important;
   }
 }
 
@@ -194,10 +207,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .portfolio-row {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .portfolio-item {
   border: 1px solid white;
   border-radius: 10px;
   padding: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

@@ -41,7 +41,7 @@ export default function Projects () {
                     <div className="gif-holder"></div>
                     <div className="portfolio-content text-light font-mono">
                         <h3> Gravity Album Viewer </h3>
-                        <h6> An Online Album Viewer built for the customers of Gravity Studio.</h6>
+                        <h6> An Online Album Viewer built for the customers of Gravity Studio. Written UI and APIs using React and Express. </h6>
                         <div className="skills">
                             <a>ReactJS</a> <a>ExpressJS</a> <a>Firestore</a> <a>Drive API</a>
                         </div>
@@ -50,10 +50,34 @@ export default function Projects () {
                 <div className="col-12 col-md-5 portfolio-item ml-1">
                     <div className="gif-holder"></div>
                     <div className="portfolio-content text-light font-mono">
+                        <h3> stretch inc. </h3>
+                        <h6> A slot booking application built for a fitness company. Built logic to check slot availability, 
+                            to book a slot, to schedule timings for the day and other APIs. Also developed few pages for the frontend.</h6>
+                        <div className="skills">
+                            <a>PHP</a> <a>Python</a> <a>Flask</a> <a>Firebase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="row portfolio-row">
+                <div className="col-12 col-md-5 portfolio-item mr-1">
+                    <div className="gif-holder"></div>
+                    <div className="portfolio-content text-light font-mono">
                         <h3> Gravity Album Viewer </h3>
-                        <h6> An Online Album Viewer built for the customers of Gravity Studio.</h6>
+                        <h6> An Online Album Viewer built for the customers of Gravity Studio. Written UI and APIs using React and Express. </h6>
                         <div className="skills">
                             <a>ReactJS</a> <a>ExpressJS</a> <a>Firestore</a> <a>Drive API</a>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-12 col-md-5 portfolio-item ml-1">
+                    <div className="gif-holder"></div>
+                    <div className="portfolio-content text-light font-mono">
+                        <h3> stretch inc. </h3>
+                        <h6> A slot booking application built for a fitness company. Built logic to check slot availability, 
+                            to book a slot, to schedule timings for the day and other APIs. Also developed few pages for the frontend.</h6>
+                        <div className="skills">
+                            <a>PHP</a> <a>Python</a> <a>Flask</a> <a>Firebase</a>
                         </div>
                     </div>
                 </div>
