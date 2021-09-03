@@ -34,7 +34,7 @@ export default function Projects () {
                         <h1 className="my-4">Projects</h1> 
                         <p className="about-content">Here are some of my projects I've done so far...</p> 
                     </div>
-                    </motion.div>
+                </motion.div>
             </motion.div>
             <div className="row portfolio-row"> 
                 <div className="col-12 col-md-5 m-3 p-0">

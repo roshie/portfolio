@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 body {
-  background-color: #131313;
+  background-color: #131313 !important;
 }
 
 .fs-14 {
@@ -36,6 +36,10 @@ body {
   border: 1px solid white;
   margin-bottom: 1.5rem;
 }
+.message-padding {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
 
 @media screen and (max-width: 768px) {
   .ml-md-5 {
@@ -55,6 +59,10 @@ body {
   .portfolio-row {
     display: flex;
     justify-content: center;
+  }
+  .message-padding {
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
   }
 }
 
@@ -241,4 +249,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .portfolio-title:hover {
   transform: scale(1.05);
+}
+
+.btn-submit {
+  background-color: #12ffff !important;
 }
