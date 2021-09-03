@@ -31,6 +31,12 @@ body {
   padding: 0 5rem 0 5rem;
 }
 
+.gif {
+  height: 15vw;
+  border: 1px solid white;
+  margin-bottom: 1.5rem;
+}
+
 @media screen and (max-width: 768px) {
   .ml-md-5 {
     margin-left: 0rem;
@@ -49,7 +55,12 @@ body {
   .portfolio-row {
     display: flex;
     justify-content: center;
-    margin-bottom: 0rem !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gif {
+    height: 35vw;
   }
 }
 
@@ -208,13 +219,26 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .portfolio-row {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 .portfolio-item {
-  border: 1px solid white;
+  border: 1px solid rgb(43, 43, 43);
   border-radius: 10px;
   padding: 3rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  transition: all 0.5s ease;
+  height: 100%;
+}
+
+.portfolio-item:hover {
+  background-color: #202020;
+}
+
+.portfolio-title {
+  font-weight: 500;
+  transition: all 0.1s ease;
+}
+
+.portfolio-title:hover {
+  transform: scale(1.05);
 }
