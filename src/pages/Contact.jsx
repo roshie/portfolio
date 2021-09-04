@@ -39,7 +39,10 @@ export default function Contact () {
                 Message: message
             })
             .then((docRef) => {
-                setMsg({})
+                setMsg({}) 
+                setName("")
+                setEmail("")
+                setMessage("")
             })
             .catch((error) => {
                 console.error("Error adding Message");
