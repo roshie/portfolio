@@ -42,9 +42,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .ml-md-5 {
-    margin-left: 0rem;
-  }
   .about-content {
     padding: 0 0 0 0;
   }
@@ -69,6 +66,9 @@ body {
 @media screen and (max-width: 767px) {
   .gif {
     height: 35vw;
+  }
+  .ml-md-5 {
+    margin-left: 0rem;
   }
 }
 

@@ -50,8 +50,8 @@ export default class Home extends React.Component {
         <div ref={this.vantaRef} className="d-flex flex-column align-items-md-start align-items-center" style={{height: '100vh'}}>  
             <motion.div exit="exit" initial="initial" animate="animate">
                 <motion.div variants={this.fadeIn1}>
-                  <div className="text-light ml-md-5 font-mono name" style={{marginTop: '8rem', fontSize: '5rem'}}>Roshita</div>  
-                  <div className="text-light ml-md-5 font-mono fs-14 mb-2 typewriter">
+                  <div className="text-light ml-md-5 font-mono name text-center text-md-start" style={{marginTop: '8rem', fontSize: '5rem'}}>Roshita</div>  
+                  <div className="text-light ml-md-5 font-mono fs-14 mb-2 typewriter text-center text-md-start">
                     <Typewriter
                           options={{
                             strings: ['Developer. Coding enthusiast.'],
@@ -60,7 +60,7 @@ export default class Home extends React.Component {
                           }} 
                         />
                   </div>
-                  <div className="text-light ml-md-5 mt-2">
+                  <div className="text-light ml-md-5 mt-2 text-center text-md-start">
                     <a href="" className="socialIcons text-light fs-14"><FontAwesomeIcon icon={faFacebook} /></a>
                     <a href="" className="socialIcons text-light mx-3 fs-14"><FontAwesomeIcon icon={faInstagram} /></a>
                     <a href="" className="socialIcons text-light fs-14"><FontAwesomeIcon icon={faGithub} /></a>
