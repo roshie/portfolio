@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^12.8.3",
     "aos": "^2.3.4",
     "bootstrap": "^5.1.0",
+    "firebase": "^9.0.1",
     "framer-motion": "^4.1.17",
     "loaders.css": "^0.1.2",
     "mongodb": "^4.1.1",
