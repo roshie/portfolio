@@ -1,6 +1,8 @@
 import React, { useState } from "react" 
 import Menu from './Menu' 
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
+import firebase from 'firebase/compat/app';
+import "../firebase";
  
 export default function Contact () {
 
@@ -27,7 +29,22 @@ export default function Contact () {
 
     const HandleSubmit = (e) => {
         e.preventDefault(); 
-        setMsg({})
+        var db = firebase.firestore();
+
+        if (name != "" && email != "" && message != "") {
+            db.collection("messages")
+            .add({
+                Email: email,
+                Name: name,
+                Message: message
+            })
+            .then((docRef) => {
+                setMsg({})
+            })
+            .catch((error) => {
+                console.error("Error adding Message");
+            });
+        }   
     }
 
     return ( 
