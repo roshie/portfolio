@@ -1,5 +1,4 @@
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore';
+import { initializeApp } from "firebase/app"
 
 const firebaseConfig = {
   apiKey: "AIzaSyCpnc5YATCXShllO1pquhPLJqxXC0Y1Zfg",
@@ -12,4 +11,4 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+export const firebaseApp = initializeApp(firebaseConfig);
