@@ -36,20 +36,20 @@ export default function About () {
                     <div className="row text-light mb-5">
                         <h3 className="font-mono mb-4"> Skills </h3> 
                         <div className="my-2 skills">
-                            <a>HTML</a> <a>CSS</a> <a>Javascript</a> <a>Python</a> 
-                            <a>Dart</a> <a>PHP</a> <a>C / C++</a> <a>Java</a> <a>TypeScript</a>
+                            <span>HTML</span> <span>CSS</span> <span>Javascript</span> <span>Python</span> 
+                            <span>Dart</span> <span>PHP</span> <span>C / C++</span> <span>Java</span> <span>TypeScript</span>
                         </div> 
                         <div className="my-2 skills">
-                            <a>Bootstrap</a> <a>Material UI</a> <a>Jquery</a> <a>Flask</a> 
-                            <a>Django</a> <a>FastAPI</a> <a>Flutter</a> <a>Android</a> <a>Redux</a> 
+                            <span>Bootstrap</span> <span>Material UI</span> <span>Jquery</span> <span>Flask</span> 
+                            <span>Django</span> <span>FastAPI</span> <span>Flutter</span> <span>Android</span> <span>Redux</span> 
                         </div> 
                         <div className="my-2 skills">
-                            <a>ReactJS</a> <a>Angular</a> <a>NodeJS</a> <a>ExpressJS</a> <a>NextJS</a> 
-                            <a>MySQL</a> <a>MongoDB</a> <a>Firestore</a> <a>PostgreSQL</a><a>SQLAlchemy</a> 
+                            <span>ReactJS</span> <span>Angular</span> <span>NodeJS</span> <span>ExpressJS</span> <span>NextJS</span> 
+                            <span>MySQL</span> <span>MongoDB</span> <span>Firestore</span> <span>PostgreSQL</span><span>SQLAlchemy</span> 
                         </div>
                         <div className="my-2 skills">
-                            <a>Git</a> <a>GitHub</a> <a>Firebase</a> <a>Supabase</a><a>Postman</a><a>Wordpress</a> <a>Figma</a> 
-                            <a>Adobe XD</a> <a>Photoshop</a> <a>Premiere Pro</a> <a>Illustrator</a> <a>Unity</a> 
+                            <span>Git</span> <span>GitHub</span> <span>Firebase</span> <span>Supabase</span><span>Postman</span><span>Wordpress</span> <span>Figma</span> 
+                            <span>Adobe XD</span> <span>Photoshop</span> <span>Premiere Pro</span> <span>Illustrator</span> <span>Unity</span> 
                         </div> 
                     </div>
                     <div className="row text-light">

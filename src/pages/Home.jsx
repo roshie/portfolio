@@ -61,10 +61,10 @@ export default class Home extends React.Component {
                         />
                   </div>
                   <div className="text-light ml-md-5 mt-2 text-center text-md-start">
-                    <a href="" className="socialIcons text-light fs-14"><FontAwesomeIcon icon={faFacebook} /></a>
-                    <a href="" className="socialIcons text-light mx-3 fs-14"><FontAwesomeIcon icon={faInstagram} /></a>
-                    <a href="" className="socialIcons text-light fs-14"><FontAwesomeIcon icon={faGithub} /></a>
-                    <a href="" className="socialIcons text-light mx-3 fs-14"><FontAwesomeIcon icon={faLinkedin} /></a>
+                    <a href="https://facebook.com/" className="socialIcons text-light fs-14"><FontAwesomeIcon icon={faFacebook} /></a>
+                    <a href="https://instagram.com/" className="socialIcons text-light mx-3 fs-14"><FontAwesomeIcon icon={faInstagram} /></a>
+                    <a href="https://github.com/roshie" className="socialIcons text-light fs-14"><FontAwesomeIcon icon={faGithub} /></a>
+                    <a href="https://linkedin.com/" className="socialIcons text-light mx-3 fs-14"><FontAwesomeIcon icon={faLinkedin} /></a>
                   </div>
               </motion.div>
             </motion.div>

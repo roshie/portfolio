@@ -31,9 +31,9 @@ export default function Contact () {
         e.preventDefault(); 
         const db = getFirestore(firebaseApp);
 
-        if (name != "" && email != "" && message != "") {
+        if (name !== "" && email !== "" && message !== "") {
 
-            const docRef = addDoc(collection(db, "messages"), {
+            addDoc(collection(db, "messages"), {
                 Email: email,
                 Name: name,
                 Message: message
