@@ -32,7 +32,7 @@ export default function Projects () {
                     <motion.div variants={fadeIn1}> 
                         <div className="row text-light my-5 font-mono">
                             <h1 className="my-4">Projects</h1> 
-                            <p className="about-content">Here are some of my projects I've done so far...</p> 
+                            <p className="about-content">Here are some of the projects I've worked.</p> 
                         </div>
                     </motion.div>
                 </motion.div>
