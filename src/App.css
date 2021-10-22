@@ -10,10 +10,12 @@ body {
 
 .font-mono {
   font-family: monospace;
+  cursor: default;
 }
 
 .font-sans {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: default;
 }
 
 .ml-md-5 {
