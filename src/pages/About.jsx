@@ -31,7 +31,7 @@ export default function About () {
                         <h1 className="my-4">About</h1> 
                         <p className="about-content">I'm a Budding Engineer who's fueled by coffee. I'm currently pursuing my Bachelor of 
                             Technology in Loyola-ICAM College of Engineering and Technology. Being a Minimalist, 
-                            I always keen on keeping up things simple, organised and well-planned. PS: I'm a daydreamer too.</p> 
+                            I'm always keen on keeping up things simple, organised and well-planned. PS: I'm a daydreamer too.</p> 
                     </div>
                     <div className="row text-light mb-5">
                         <h3 className="font-mono mb-4"> Skills </h3> 
@@ -49,7 +49,7 @@ export default function About () {
                         </div>
                         <div className="my-2 skills">
                             <span>Git</span> <span>GitHub</span> <span>Firebase</span> <span>Supabase</span><span>Postman</span><span>Wordpress</span> <span>Figma</span> 
-                            <span>Adobe XD</span> <span>Photoshop</span> <span>Premiere Pro</span> <span>Illustrator</span> <span>Unity</span> 
+                            <span>Adobe XD</span> <span>Photoshop</span> <span>Premiere Pro</span> <span>Illustrator</span> <span>Unity</span> <span>IoT</span> 
                         </div> 
                     </div>
                     <div className="row text-light">
