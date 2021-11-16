@@ -45,7 +45,7 @@ export default function Projects () {
                             description="A slot booking application built for a fitness company. Built logic to check slot availability, 
                             to book a slot, to schedule timings for the day and other APIs. Also developed few pages for the frontend."
                         >
-                            <span>PHP</span> <span>Python</span> <span>Flask</span> <span>MySQL</span> <span>Firebase</span>
+                            <span>PHP</span> <span>Python-Flask</span> <span>MySQL</span> <span>Firebase</span>
                         </PortfolioItem>
                     </div> 
                     <div className="col-12 col-md-5 m-3 p-0">
@@ -74,9 +74,9 @@ export default function Projects () {
                         <PortfolioItem
                             title="Syndeo" 
                             type="right" 
-                            description="A portal for connecting mentors and mentees. Developed for the purpose of a mentorship programme."
+                            description="A portal for connecting mentors and mentees. Developed for a mentorship programme."
                         >
-                            <span>PHP</span> <span>FLASK</span> <span>Firebase</span> <span>MySQL</span> <span>Python</span>
+                            <span>PHP</span> <span>Python-Flask</span> <span>Firebase</span> <span>MySQL</span> <span>Python</span>
                         </PortfolioItem>
                     </div>
                 </div> 
@@ -96,16 +96,33 @@ export default function Projects () {
                             type="right" 
                             description="A Web-based shopping site."
                         >
-                            <span>React</span> <span>FastAPI</span> <span>Razorpay</span> <span>React-Bootstrap</span> 
+                            <span>React</span> <span>Python-FastAPI</span> <span>Razorpay</span> <span>MySQL</span> <span>React-Bootstrap</span> 
                         </PortfolioItem>
                     </div>
                 </div>
+                <motion.div exit="exit" initial="initial" animate="animate">
+                    <motion.div variants={fadeIn1}> 
+                        <div className="row text-light my-5 font-mono">
+//                             <h1 className="my-4">Hobby Projects</h1> 
+                            <p className="about-content">Some of my Hobby projects are listed below.</p> 
+                        </div>
+                    </motion.div>
+                </motion.div>
                 <div className="row portfolio-row">
                     <div className="col-12 col-md-5 m-3 p-0">
                         <PortfolioItem
-                            title="Prime-DocManager" 
+                            title="Potato, the Bot" 
                             type="left" 
-                            description="A simple application to reduce time on Paperwork."
+                            description="A Discord bot that notifies the availability of Covid Vaccination Slots."
+                        >
+                            <span>Python</span> <span>discord.py</span> <span>CoWIN APIs</span>
+                        </PortfolioItem>
+                    </div>
+                    <div className="col-12 col-md-5 m-3 p-0">
+                        <PortfolioItem
+                            title="Prime-DocManager" 
+                            type="right" 
+                            description="A simple application to perform calculations and reduce time on Paperwork."
                         >
                             <span>Python</span> <span>Flask</span> <span>Jinja2</span> <span>SQLAlchemy</span> <span>Mailmerge</span>
                         </PortfolioItem>
