@@ -53,7 +53,7 @@ export default function Projects () {
                             title="Gravity Album Viewer" 
                             type="right" 
                             image="album.gif"
-                            description="An Online Album Viewer built for the customers of Gravity Studio. Written UI and APIs using React and Express."
+                            description="An Online Album Viewer built for a Photo Studio. Written UI and APIs using React and Express."
                         >
                             <span>ReactJS</span> <span>ExpressJS</span> <span>Firestore</span> <span>Drive API</span>
                         </PortfolioItem>
@@ -85,15 +85,26 @@ export default function Projects () {
                         <PortfolioItem
                             title="Zue Technologies" 
                             type="left" 
-                            description="A minimal portfolio page for a Company."
+                            description="A minimal portfolio page for an organization."
                         >
                             <span>ReactJS</span> <span>Bootstrap</span> <span>Framer-motion</span> 
                         </PortfolioItem>
                     </div>
                     <div className="col-12 col-md-5 m-3 p-0">
                         <PortfolioItem
-                            title="Prime-DocManager" 
+                            title="BotHub" 
                             type="right" 
+                            description="A Web-based shopping site."
+                        >
+                            <span>React</span> <span>FastAPI</span> <span>Razorpay</span> <span>React-Bootstrap</span> 
+                        </PortfolioItem>
+                    </div>
+                </div>
+                <div className="row portfolio-row">
+                    <div className="col-12 col-md-5 m-3 p-0">
+                        <PortfolioItem
+                            title="Prime-DocManager" 
+                            type="left" 
                             description="A simple application to reduce time on Paperwork."
                         >
                             <span>Python</span> <span>Flask</span> <span>Jinja2</span> <span>SQLAlchemy</span> <span>Mailmerge</span>
