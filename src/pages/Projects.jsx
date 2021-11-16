@@ -103,7 +103,6 @@ export default function Projects () {
                 <motion.div exit="exit" initial="initial" animate="animate">
                     <motion.div variants={fadeIn1}> 
                         <div className="row text-light my-5 font-mono">
-//                             <h1 className="my-4">Hobby Projects</h1> 
                             <p className="about-content">Some of my Hobby projects are listed below.</p> 
                         </div>
                     </motion.div>
