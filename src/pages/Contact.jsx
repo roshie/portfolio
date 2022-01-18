@@ -43,15 +43,15 @@ export default function Contact () {
                 "content": `A Message From ${name}`,
                 "embeds": [
                     {
-                    "author": {
-                        "name": name,
-                    },
-                    "title": email,
-                    "description": message,
-                    "color": 11342935,
-                    "footer": {
-                        "text": "From Vercel.app",
-                    }
+                        "author": {
+                            "name": name,
+                        },
+                        "title": email,
+                        "description": message,
+                        "color": 11342935,
+                        "footer": {
+                            "text": "From Vercel.app",
+                        }
                     }
                 ]
             }
