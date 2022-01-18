@@ -38,10 +38,37 @@ export default function Contact () {
                 Name: name,
                 Message: message
             });
-            setMsg({}) 
-            setName("")
-            setEmail("")
-            setMessage("")
+
+            const dataToSend = {
+                "content": `A Message From ${name}`,
+                "embeds": [
+                    {
+                    "author": {
+                        "name": name,
+                    },
+                    "title": email,
+                    "description": message,
+                    "color": C90061,
+                    "footer": {
+                        "text": "From Vercel.app",
+                    }
+                    }
+                ]
+            }
+
+            fetch("https://discord.com/api/webhooks/932978551135825941/B5n-XbOCwmY3xahNnDzPKm9oAWvFKUZ1uAfH28NTODPqpTP41LWs4h1ooZhZV2gpCWJj", {
+                method: 'POST', 
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dataToSend) 
+              }).then(() => {
+                
+                setMsg({}) 
+                setName("")
+                setEmail("")
+                setMessage("")
+              })
            
         }   
     }
