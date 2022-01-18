@@ -48,7 +48,7 @@ export default function Contact () {
                     },
                     "title": email,
                     "description": message,
-                    "color": C90061,
+                    "color": 11342935,
                     "footer": {
                         "text": "From Vercel.app",
                     }
