@@ -177,7 +177,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .menu-item:hover {
-  color: #12ffff; 
+  color: #12ffff;
   transform: translateX(5%);
 }
 
@@ -258,4 +258,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .btn-submit {
   background-color: #12ffff !important;
+}
+
+.github {
+  color: rgb(255, 255, 255);
+  background-color: rgb(84, 84, 84);
+  border-radius: 30px;
+  margin: 10px;
+  font-family: monospace;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  transition: all 0.6s ease;
+  cursor: default;
+}
+
+.github:hover {
+  background-color: white !important;
+  color: black;
 }
