@@ -50,13 +50,13 @@ export default function Contact () {
                         "description": message,
                         "color": 11342935,
                         "footer": {
-                            "text": "From Vercel.app",
+                            "text": "From https://roshie.tech/",
                         }
                     }
                 ]
             }
 
-            fetch("https://discord.com/api/webhooks/932978551135825941/B5n-XbOCwmY3xahNnDzPKm9oAWvFKUZ1uAfH28NTODPqpTP41LWs4h1ooZhZV2gpCWJj", {
+            fetch("https://discord.com/api/webhooks/992257343716859965/0OgNO3N7F3P8B3DI45qHevEjb2PwkQn39b55laormD3DA7Z_quBwFM57EAEzVoODpLgT", {
                 method: 'POST', 
                 headers: {
                   'Content-Type': 'application/json'
