@@ -3,7 +3,7 @@ import Menu from "./Menu";
 import RINGS from "vanta/dist/vanta.rings.min";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
+  faTwitter,
   faGithub,
   faInstagram,
   faLinkedin,
