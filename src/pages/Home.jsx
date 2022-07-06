@@ -76,16 +76,16 @@ export default class Home extends React.Component {
               </div>
               <div className="text-light ml-md-5 mt-2 text-center text-md-start">
                 <a
-                  href="https://facebook.com/"
+                  href="https://instagram.com/roshie.ta"
                   className="socialIcons text-light fs-14"
                 >
-                  <FontAwesomeIcon icon={faFacebook} />
+                  <FontAwesomeIcon icon={faInstagram} />
                 </a>
                 <a
-                  href="https://instagram.com/"
+                  href="https://twitter.com/roshie_ta"
                   className="socialIcons text-light mx-3 fs-14"
                 >
-                  <FontAwesomeIcon icon={faInstagram} />
+                  <FontAwesomeIcon icon={faTwitter} />
                 </a>
                 <a
                   href="https://github.com/roshie"
