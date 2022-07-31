@@ -34,16 +34,16 @@ const certificates = [
 
 const experiences = [
   {
-    date: "Jul 2021 - Aug 2021",
-    title: "Web Developer",
-    place: "LICET",
-    description: "Developed a portal for a mentorship program.",
-  },
-  {
     date: "Feb 2021 - Jul 2021",
     title: "SDE Intern",
     place: "Onfluence, UK",
     description: "Played a role in the team as Backend developer.",
+  },
+  {
+    date: "Jul 2021 - Aug 2021",
+    title: "Web Developer",
+    place: "LICET",
+    description: "Developed a portal for a mentorship program.",
   },
   {
     date: "Jul 2021 - Aug 2021",
