@@ -88,7 +88,6 @@ export default class Home extends React.Component {
                 }`}
                 style={{ height: "100vh" }}
               >
-<<<<<<< HEAD
                 Roshita
               </div>
               <div className="text-light ml-md-5 font-mono fs-14 mb-2 typewriter text-center text-md-start">
@@ -125,7 +124,6 @@ export default class Home extends React.Component {
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
-=======
                 <motion.div exit="exit" initial="initial" animate="animate">
                   <motion.div variants={this.fadeIn1}>
                     <div
@@ -171,7 +169,6 @@ export default class Home extends React.Component {
                     </div>
                   </motion.div>
                 </motion.div>
->>>>>>> d02684c... Add page loader
               </div>
             </Menu>
           </motion.div>

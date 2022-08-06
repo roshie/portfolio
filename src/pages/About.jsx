@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Menu from "./Menu";
 import { motion } from "framer-motion";
 import {
@@ -13,6 +13,7 @@ import {
   faCertificate,
   faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
+import Disk from "./components/Disk";
 
 const certificates = [
   {
@@ -34,6 +35,12 @@ const certificates = [
 
 const experiences = [
   {
+    date: "Jul 2021 - Aug 2021",
+    title: "Web Developer",
+    place: "LICET",
+    description: "Developed a portal for a mentorship program.",
+  },
+  {
     date: "Feb 2021 - Jul 2021",
     title: "SDE Intern",
     place: "Onfluence, UK",
@@ -41,16 +48,9 @@ const experiences = [
   },
   {
     date: "Jul 2021 - Aug 2021",
-    title: "Web Developer",
-    place: "LICET",
-    description: "Developed a portal for a mentorship program.",
-  },
-  {
-    date: "Jul 2021 - Aug 2021",
     title: "Full Stack Developer Intern",
     place: "Zue Technologies",
-    description:
-      "Developed a Portfolio and a Shopping Site for their New Startup.",
+    description: "Developed a landing site for their New Startup.",
   },
   {
     date: "Aug 2020 - Oct 2020",
@@ -61,6 +61,9 @@ const experiences = [
 ];
 
 export default function About() {
+  useEffect(() => {
+    document.title = "About | Roshitha - Portfolio";
+  }, []);
   const easing = [0.6, -0.05, 0.1, 0.99];
   const fadeIn1 = {
     initial: {
@@ -78,6 +81,13 @@ export default function About() {
   };
   return (
     <Menu>
+      <Disk
+        style={{
+          opacity: 0.1,
+          zIndex: 0,
+          transform: "scale(4) translate(-20%,80%)",
+        }}
+      />
       <div className="d-flex flex-column justify-content-center text-center p-5">
         <motion.div exit="exit" initial="initial" animate="animate">
           <motion.div variants={fadeIn1}>
@@ -114,12 +124,14 @@ export default function About() {
               </div>
               <div className="my-2 skills">
                 <span>Git</span> <span>GitHub</span> <span>Firebase</span>{" "}
-                <span>Supabase</span>
+                {/* <span>Supabase</span> */}
                 <span>Postman</span>
-                <span>Wordpress</span> <span>Figma</span>
+                {/* <span>Wordpress</span> */}
+                <span>Figma</span>
                 <span>Adobe XD</span> <span>Photoshop</span>{" "}
                 <span>Premiere Pro</span> <span>Illustrator</span>{" "}
                 <span>Unity</span> <span>IoT</span>
+                <span>Solidity</span>
               </div>
             </div>
             <div className="row text-light">
@@ -133,9 +145,13 @@ export default function About() {
                       color: "#fff",
                       border: "none",
                     }}
-                    contentArrowStyle={{ borderRight: "7px solid  white" }}
+                    contentArrowStyle={{ borderRight: "7px solid #fff" }}
                     date="2019 - 2023"
-                    iconStyle={{ background: "#131313", color: "#fff" }}
+                    iconStyle={{
+                      background: "#131313",
+                      color: "#fff",
+                      border: "1px solid #ffff00",
+                    }}
                     icon={<FontAwesomeIcon icon={faUniversity} />}
                   >
                     <h3 className="font-weight-bold my-3">
@@ -150,7 +166,7 @@ export default function About() {
                   </VerticalTimelineElement>
                   <VerticalTimelineElement
                     className="font-mono"
-                    date="2007 - 2019"
+                    date="2017 - 2019"
                     contentStyle={{ background: "#131313", color: "#fff" }}
                     iconStyle={{ background: "#131313", color: "#fff" }}
                     icon={<FontAwesomeIcon icon={faSchool} />}
@@ -169,6 +185,14 @@ export default function About() {
                 </VerticalTimeline>
               </div>
             </div>
+            {/* <Disk
+              style={{
+                opacity: 0.1,
+                zIndex: 0,
+                right: 0,
+                transform: "scale(4) translate(50%,10%)",
+              }}
+            /> */}
             <div className="row text-light">
               <h3 className="font-mono"> Experience </h3>
               <div className="timeline text-start">
@@ -180,6 +204,9 @@ export default function About() {
                         contentStyle={{
                           background: "#131313",
                           color: "#fff",
+                          border: "none",
+                        }}
+                        style={{
                           border: "none",
                         }}
                         contentArrowStyle={{ borderRight: "7px solid  white" }}
@@ -217,6 +244,22 @@ export default function About() {
                     );
                   })}
                 </VerticalTimeline>
+              </div>
+            </div>
+            <div className="row text-light">
+              <h6 className="font-mono"> Also View my profile in </h6>
+              <div>
+                <a href="https://leetcode.com/roshithaignatius21/">
+                  <img src="leetcode.png" alt="lc" width="40" className="m-3" />
+                </a>
+                <a href="https://www.hackerrank.com/roshithaignatiu1">
+                  <img
+                    src="hackerrank.png"
+                    alt="hr"
+                    width="40"
+                    className="m-3"
+                  />
+                </a>
               </div>
             </div>
           </motion.div>
