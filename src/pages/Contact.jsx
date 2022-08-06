@@ -1,14 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Menu from "./Menu";
 import { motion } from "framer-motion";
 import { firebaseApp } from "../firebase";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faGithub,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [msg, setMsg] = useState({ display: "none" });
+
+  useEffect(() => {
+    document.title = "Contact | Roshitha - Portfolio";
+  }, []);
 
   const easing = [0.6, -0.05, 0.1, 0.99];
   const fadeIn1 = {
@@ -38,37 +49,32 @@ export default function Contact() {
       });
 
       const dataToSend = {
-        content: `A Message From ${name}`,
-        embeds: [
-          {
-            author: {
-              name: name,
-            },
-            title: email,
-            description: message,
-            color: 11342935,
-            footer: {
-              text: "From https://roshie.tech/",
-            },
-          },
-        ],
+        name,
+        email,
+        message,
       };
 
       fetch(
-        "https://discord.com/api/webhooks/992257343716859965/0OgNO3N7F3P8B3DI45qHevEjb2PwkQn39b55laormD3DA7Z_quBwFM57EAEzVoODpLgT",
+        "https://roshportfolio.azurewebsites.net/api/contactFn?code=Rf5AFPoW4ZEtyrYX4oPBOV5QhT-k5yP44SKpkuttaeLkAzFuvOCQLw==",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            mode: "cors",
           },
+
           body: JSON.stringify(dataToSend),
         }
-      ).then(() => {
-        setMsg({});
-        setName("");
-        setEmail("");
-        setMessage("");
-      });
+      )
+        .then(() => {
+          setMsg({});
+          setName("");
+          setEmail("");
+          setMessage("");
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     }
   };
 
@@ -131,6 +137,32 @@ export default function Contact() {
             <div className="row mt-4">
               <h1 className="my-2">Or, Mail me at</h1>
               <p className="about-content">mail.roshita@gmail.com</p>
+              <div className="text-light">
+                <a
+                  href="https://twitter.com/roshie_ta"
+                  className="socialIcons text-light fs-14"
+                >
+                  <FontAwesomeIcon icon={faTwitter} />
+                </a>
+                <a
+                  href="https://instagram.com/"
+                  className="socialIcons text-light mx-3 fs-14"
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+                <a
+                  href="https://github.com/roshie"
+                  className="socialIcons text-light fs-14"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+                <a
+                  href="https://linkedin.com/in/roshitha-rajesh"
+                  className="socialIcons text-light mx-3 fs-14"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+              </div>
             </div>
           </motion.div>
         </motion.div>
