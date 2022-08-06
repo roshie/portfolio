@@ -88,47 +88,11 @@ export default class Home extends React.Component {
                 }`}
                 style={{ height: "100vh" }}
               >
-                Roshita
-              </div>
-              <div className="text-light ml-md-5 font-mono fs-14 mb-2 typewriter text-center text-md-start">
-                <Typewriter
-                  options={{
-                    strings: ["Developer. Coding enthusiast."],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </div>
-              <div className="text-light ml-md-5 mt-2 text-center text-md-start">
-                <a
-                  href="https://instagram.com/roshie.ta"
-                  className="socialIcons text-light fs-14"
-                >
-                  <FontAwesomeIcon icon={faInstagram} />
-                </a>
-                <a
-                  href="https://twitter.com/roshie_ta"
-                  className="socialIcons text-light mx-3 fs-14"
-                >
-                  <FontAwesomeIcon icon={faTwitter} />
-                </a>
-                <a
-                  href="https://github.com/roshie"
-                  className="socialIcons text-light fs-14"
-                >
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/roshitha-rajesh"
-                  className="socialIcons text-light mx-3 fs-14"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </a>
                 <motion.div exit="exit" initial="initial" animate="animate">
                   <motion.div variants={this.fadeIn1}>
                     <div
                       className="text-light ml-md-5 font-mono name text-center text-md-start"
-                      style={{ marginTop: "8rem", fontSize: "5rem" }}
+                      style={{ marginTop: "8rem", fontSize: "4rem" }}
                     >
                       Roshitha
                     </div>
@@ -169,6 +133,7 @@ export default class Home extends React.Component {
                     </div>
                   </motion.div>
                 </motion.div>
+                {/* >>>>>>> d02684c... Add page loader */}
               </div>
             </Menu>
           </motion.div>
