@@ -2,6 +2,7 @@
 
 body {
   background-color: #131313 !important;
+  overflow-x: hidden;
 }
 
 .fs-14 {
@@ -35,7 +36,7 @@ body {
 
 .gif {
   height: 15vw;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   margin-bottom: 1.5rem;
 }
 .message-padding {
@@ -111,11 +112,13 @@ body {
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #6b6b6b;
+  transition: all 1s ease;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
   background: #12ffff;
+  box-shadow: 0 0px 25px rgba(220, 220, 220, 0.721);
 }
 
 /* Position and sizing of clickable cross button */
@@ -229,6 +232,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .skills > span:hover {
   background-color: #12ffff;
   color: white;
+  box-shadow: 0 0px 20px #1effff78;
 }
 
 .portfolio-row {
@@ -241,14 +245,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding: 3rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   height: 100%;
 }
 
 .portfolio-item:hover {
   background-color: #202020;
+  /* transform: scale(1.1); */
 }
-
 .portfolio-title {
   font-weight: 500;
   transition: all 0.1s ease;
@@ -270,11 +274,215 @@ Note: Beware of modifying this element as it can break the animations - you shou
   font-family: monospace;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
-  transition: all 0.6s ease;
-  cursor: default;
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .github:hover {
   background-color: white !important;
   color: black;
+  box-shadow: 0 0px 25px rgba(220, 220, 220, 0.522);
+}
+.external-link {
+  color: black;
+  background-color: #ffff00;
+  border-radius: 30px;
+  margin: 10px;
+  font-family: monospace;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.external-link:hover {
+  background-color: white !important;
+  color: black;
+  box-shadow: 0 0px 25px rgba(220, 220, 220, 0.574);
+}
+
+/* loader */
+.loader {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #12ffff #12ffff transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader2 {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-left: 5px;
+  transform: perspective(200px) rotateX(66deg);
+  animation: disappearK 0.9s cubic-bezier(0.53, 0.14, 1, 1) 1.8s !important;
+  animation-iteration-count: 1 !important;
+}
+
+.loader2::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid;
+  border-color: transparent transparent #ffff00 #ffff00;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 2.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 6px solid;
+  border-color: transparent transparent #8cff00 #8cff00;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 60px;
+  height: 60px;
+  border: 5px solid;
+  border-color: #ff13aa #ff13aa transparent transparent;
+  animation: rotation 2s linear infinite;
+}
+
+.bounce {
+  animation: bounceback 2.8s ease;
+}
+
+@keyframes bounceback {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes disappearK {
+  0% {
+    transform: perspective(200px) rotateX(66deg) scale(1);
+  }
+  100% {
+    transform: perspective(200px) rotateX(90deg) scale(5);
+  }
+}
+
+.diskloader {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #12ffff #12ffff transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 6s linear infinite;
+}
+.diskloader::after,
+.diskloader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 6px solid;
+  border-color: transparent transparent #8cff00 #8cff00;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 5s linear infinite;
+  transform-origin: center center;
+}
+.diskloader::before {
+  width: 60px;
+  height: 60px;
+  border: 5px solid;
+  border-color: #ff13aa #ff13aa transparent transparent;
+  animation: rotation 5s linear infinite;
+}
+
+.disk {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.disk::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid;
+  border-color: transparent transparent #ffff00 #ffff00;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 5s linear infinite;
+  transform-origin: center center;
 }
