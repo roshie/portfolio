@@ -87,7 +87,7 @@ const projects = [
     title: "Project Switcher",
     image: "thumbnails/switcher.gif",
     description:
-      "A Mobile Application to control appliances from outside of home.",
+      "A Mobile Application to control appliances from outside of home. Supports Synchronization between Multiple Mobile Clients using SocketIO.",
     tools: ["Flutter", "Flask", "Micropython", "SocketIO", "ESP8266"],
     githubLink: "https://github.com/roshie/switcher-flutter",
     siteLink: "",
