@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AOS from "aos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import ImageViewer from "react-simple-image-viewer";
+// import ImageViewer from "react-simple-image-viewer";
 import "aos/dist/aos.css";
 
 const gcpcourses = [
@@ -74,15 +74,15 @@ const courses = [
     courseVerifyLink:
       "https://www.coursera.org/account/accomplishments/verify/URBEPQD3SXMS",
   },
-  {
-    title: "Get Started with Adobe Illustrator",
-    offeredBy: "Coursera",
-    date: "Jun 6, 2022",
-    image: "courses/course-adobe.jpg",
-    topicsCovered: "Basics of Adobe illustrator, tools in illustrator.",
-    courseVerifyLink:
-      "https://www.coursera.org/account/accomplishments/verify/2RBH5D4WTGBX",
-  },
+  // {
+  //   title: "Get Started with Adobe Illustrator",
+  //   offeredBy: "Coursera",
+  //   date: "Jun 6, 2022",
+  //   image: "courses/course-adobe.jpg",
+  //   topicsCovered: "Basics of Adobe illustrator, tools in illustrator.",
+  //   courseVerifyLink:
+  //     "https://www.coursera.org/account/accomplishments/verify/2RBH5D4WTGBX",
+  // },
   {
     title: "Data Science Math Skills",
     offeredBy: "Coursera",
@@ -109,14 +109,14 @@ const courses = [
     topicsCovered: null,
     courseVerifyLink: null,
   },
-  {
-    title: "Step into Robotic Process Automation",
-    offeredBy: "GUVI",
-    image: "courses/RPA.png",
-    date: "Apr 21, 2020",
-    topicsCovered: null,
-    courseVerifyLink: "https://www.guvi.in/certificate?id=n83R51A37B8aTx47h7",
-  },
+  // {
+  //   title: "Step into Robotic Process Automation",
+  //   offeredBy: "GUVI",
+  //   image: "courses/RPA.png",
+  //   date: "Apr 21, 2020",
+  //   topicsCovered: null,
+  //   courseVerifyLink: "https://www.guvi.in/certificate?id=n83R51A37B8aTx47h7",
+  // },
 ];
 
 // const workshops = [
@@ -253,7 +253,7 @@ export default function Certifications() {
 
   return (
     <Menu>
-      {isViewerOpen && (
+      {/* {isViewerOpen && (
         <ImageViewer
           src={images}
           currentIndex={currentImage}
@@ -261,7 +261,7 @@ export default function Certifications() {
           closeOnClickOutside={true}
           onClose={closeImageViewer}
         />
-      )}
+      )} */}
       <div className="d-flex flex-column justify-content-center text-center p-5">
         <motion.div exit="exit" initial="initial" animate="animate">
           <motion.div variants={fadeIn1}>
