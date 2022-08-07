@@ -294,6 +294,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
   transition: all 0.5s ease;
   cursor: pointer;
 }
+.course-date {
+  color: rgb(255, 255, 255);
+  background-color: #3d3d3d;
+  border-radius: 30px;
+  margin: 10px;
+  font-family: monospace;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.github:hover {
+  box-shadow: 0 0px 25px rgba(220, 220, 220, 0.522);
+}
 
 .external-link:hover {
   background-color: white !important;

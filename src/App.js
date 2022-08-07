@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Certifications from "./pages/Certifications";
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/certifications" component={Certifications} />
           <Redirect to="/" />
         </Switch>
       </Router>
