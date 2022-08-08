@@ -66,18 +66,16 @@ export default function About() {
   useEffect(() => {
     document.title = "About | Roshitha - Portfolio";
 
-    fetch("https://leetcode.com/graphql/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        // "sec-fetch-mode": "cors",
-      },
-      body: JSON.stringify({
-        query:
-          "\nquery userBadges($username: String!) {\n matchedUser(username: $username) {\n badges {\n displayName\n medal {\n config {\n iconGif\n }\n }\n }\n }\n}",
-        variables: { username: "roshithaignatius21" },
-      }),
-    })
+    fetch(
+      "https://roshportfolio.azurewebsites.net/api/getBadges?code=uxo4MXpbgItnmzlf8rrCXO-vc82Fo7IVWaQYkOa6J2ScAzFu9Im18Q==",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((response) => response.json())
       .then(({ data }) => {
         setBadges(data.matchedUser.badges);
       })
@@ -289,17 +287,20 @@ export default function About() {
               </div>
             </div>
             {badges.length && (
-              <div className="row text-light">
-                <h6 className="font-mono"> LeetCode Badges </h6>
-                <div className="row">
+              <div className="row text-light mt-5 justify-content-center">
+                <h6 className="font-mono mb-3"> LeetCode Badges </h6>
+                <div className="row justify-content-center px-5 mx-5">
                   {badges.map((badge) => {
                     return (
-                      <div>
+                      <div className="col-md-2 col-3 col-12 my-5">
                         <img
                           src={badge.medal.config.iconGif}
                           alt={badge.displayName}
                           width="100"
                         />
+                        <div className="text-light font-mono mt-2">
+                          {badge.displayName}
+                        </div>
                       </div>
                     );
                   })}
