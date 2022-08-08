@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Menu from "./Menu";
 import { motion } from "framer-motion";
 import {
@@ -61,8 +61,30 @@ const experiences = [
 ];
 
 export default function About() {
+  const [badges, setBadges] = useState([]);
+
   useEffect(() => {
     document.title = "About | Roshitha - Portfolio";
+
+    fetch("https://leetcode.com/graphql/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // "sec-fetch-mode": "cors",
+      },
+      body: JSON.stringify({
+        query:
+          "\nquery userBadges($username: String!) {\n matchedUser(username: $username) {\n badges {\n displayName\n medal {\n config {\n iconGif\n }\n }\n }\n }\n}",
+        variables: { username: "roshithaignatius21" },
+      }),
+    })
+      .then(({ data }) => {
+        setBadges(data.matchedUser.badges);
+      })
+      .catch((err) => {
+        console.log(err);
+        setBadges([]);
+      });
   }, []);
   const easing = [0.6, -0.05, 0.1, 0.99];
   const fadeIn1 = {
@@ -106,21 +128,25 @@ export default function About() {
               <div className="my-2 skills">
                 <span>HTML</span> <span>CSS</span> <span>Javascript</span>{" "}
                 <span>Python</span>
-                <span>Dart</span> <span>PHP</span> <span>C / C++</span>{" "}
+                <span>Dart</span> <span>PHP</span> <span>C </span>{" "}
                 <span>Java</span> <span>TypeScript</span>
               </div>
               <div className="my-2 skills">
                 <span>Bootstrap</span> <span>Material UI</span>{" "}
-                <span>Jquery</span> <span>Flask</span>
+                <span>Tailwind CSS</span> <span>Jquery</span> <span>Flask</span>
                 <span>Django</span> <span>FastAPI</span> <span>Flutter</span>{" "}
                 <span>Android</span> <span>Redux</span>
               </div>
               <div className="my-2 skills">
-                <span>ReactJS</span> <span>Angular</span> <span>NodeJS</span>{" "}
-                <span>ExpressJS</span> <span>NextJS</span>
-                <span>MySQL</span> <span>MongoDB</span> <span>Firestore</span>{" "}
+                <span>ReactJS</span>
+                {/* <span>Angular</span> */}
+                <span>NodeJS</span> <span>ExpressJS</span> <span>NextJS</span>
+                <span>MySQL</span>
+                <span>MongoDB</span>
                 <span>PostgreSQL</span>
-                <span>SQLAlchemy</span>
+                <span>Firestore</span>
+                <span>GraphQL</span>
+                {/*<span>SQLAlchemy</span>*/}
               </div>
               <div className="my-2 skills">
                 <span>Git</span> <span>GitHub</span> <span>Firebase</span>{" "}
@@ -262,6 +288,24 @@ export default function About() {
                 </a>
               </div>
             </div>
+            {badges.length && (
+              <div className="row text-light">
+                <h6 className="font-mono"> LeetCode Badges </h6>
+                <div className="row">
+                  {badges.map((badge) => {
+                    return (
+                      <div>
+                        <img
+                          src={badge.medal.config.iconGif}
+                          alt={badge.displayName}
+                          width="100"
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
           </motion.div>
         </motion.div>
       </div>
