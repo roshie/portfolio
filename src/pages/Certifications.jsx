@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import Menu from "./Menu";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-// import ImageViewer from "react-simple-image-viewer";
 import "aos/dist/aos.css";
 
 const gcpcourses = [
@@ -205,26 +204,6 @@ export default function Certifications() {
     duration: 1500,
   });
 
-  const [currentImage, setCurrentImage] = useState(0);
-  const [isViewerOpen, setIsViewerOpen] = useState(false);
-  const images = [
-    ...gcpcourses.map((course) => course.image),
-    ...courses.map((course) => course.image),
-    ...contests.map((contest) => contest.image),
-  ];
-
-  var imgInx = -2;
-
-  const openImageViewer = useCallback((index) => {
-    // setCurrentImage(index);
-    // setIsViewerOpen(true);
-  }, []);
-
-  const closeImageViewer = () => {
-    setCurrentImage(0);
-    setIsViewerOpen(false);
-  };
-
   const easing = [0.6, -0.05, 0.1, 0.99];
   const fadeIn1 = {
     initial: {
@@ -282,12 +261,10 @@ export default function Certifications() {
         {range(gcpcourses.length / 2).map((i) => {
           const left = gcpcoursesIter.next().value;
           const right = gcpcoursesIter.next().value;
-          imgInx += 2;
           return (
             <div className="row portfolio-row">
               <div className="col-12 col-md-4 m-3 p-0">
                 <CourseItem
-                  onClick={() => openImageViewer(imgInx)}
                   title={left.title}
                   type="left"
                   image={left.image}
@@ -299,7 +276,6 @@ export default function Certifications() {
               </div>
               <div className="col-12 col-md-4 m-3 p-0">
                 <CourseItem
-                  onClick={() => openImageViewer(imgInx + 1)}
                   title={right.title}
                   type="right"
                   offeredBy={null}
@@ -317,11 +293,9 @@ export default function Certifications() {
         </div>
         <div className="row portfolio-row">
           {courses.map((course) => {
-            imgInx++;
             return (
               <div className="col-12 col-md-4 col-lg-3 m-2 p-0">
                 <CourseItem
-                  onClick={() => openImageViewer(imgInx)}
                   title={course.title}
                   type="right"
                   image={course.image}
@@ -339,11 +313,9 @@ export default function Certifications() {
         </div>
         <div className="row portfolio-row">
           {contests.map((contest) => {
-            imgInx++;
             return (
               <div className="col-12 col-md-4 col-lg-3 m-2 p-0">
                 <CourseItem
-                  onClick={() => openImageViewer(imgInx)}
                   title={contest.title}
                   type="right"
                   image={contest.image}
