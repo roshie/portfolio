@@ -54,7 +54,7 @@ const projects = [
       "An ERP for Pattarai - Tech Club. Developed a MVP, includes multiple modules such as Events management, Attendance etc.",
     image: null,
     tools: ["ReactJS", "ExpressJS", "Redux", "PostgreSQL", "MUI"],
-    githubLink: "",
+    githubLink: "https://github.com/pattarai/ProjectCortex-fe-v1",
     siteLink: "",
   },
   {
