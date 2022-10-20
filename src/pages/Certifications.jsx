@@ -6,6 +6,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import "aos/dist/aos.css";
 
+const gcpsplization =  {
+    title: "Architecting with Google Compute Engine",
+    image: "courses/course-gcp.jpg",
+    date: "Aug 26, 2022",
+    topicsCovered: "Explored infrastructure components such as networks, systems and applications services using Google Cloud Platform, with a focus on Compute Engine.",
+    courseVerifyLink:
+      "https://www.coursera.org/account/accomplishments/specialization/R9Q49B3SEUML",
+  }
+
+
 const gcpcourses = [
   {
     title: "Essential Google Cloud Infrastructure: Foundation",
@@ -258,6 +268,19 @@ export default function Certifications() {
             </div>
           </motion.div>
         </motion.div>
+        <div className="row portfolio-row">
+            <div className="col-12 col-md-4 m-3 p-0">
+              <CourseItem
+                title={gcpsplization.title}
+                type="left"
+                image={gcpsplization.image}
+                description={gcpsplization.topicsCovered}
+                offeredBy={null}
+                courseVerifyLink={gcpsplization.courseVerifyLink}
+                date={gcpsplization.date}
+              />
+            </div>
+        </div>
         {range(gcpcourses.length / 2).map((i) => {
           const left = gcpcoursesIter.next().value;
           const right = gcpcoursesIter.next().value;
