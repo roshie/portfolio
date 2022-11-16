@@ -17,8 +17,8 @@ import Disk from "./components/Disk";
 
 const certificates = [
   {
-    date: "June 2022",
-    title: "Google Cloud Fundamentals: Core Infrastructure",
+    date: "Aug 2022",
+    title: "Architecting with Google Compute Engine",
     offeredBy: "Google Cloud - Coursera",
   },
   {
@@ -50,7 +50,7 @@ const experiences = [
     date: "Jul 2021 - Aug 2021",
     title: "Full Stack Developer Intern",
     place: "Zue Technologies",
-    description: "Developed a landing site for their New Startup.",
+    description: "Built a landing site and an application for their New Startup.",
   },
   {
     date: "Aug 2020 - Oct 2020",
