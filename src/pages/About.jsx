@@ -35,6 +35,12 @@ const certificates = [
 
 const experiences = [
   {
+    date: "Jul 2022 - Dec 2022",
+    title: "Engineer (Intern)",
+    place: "BlitzCraftHQ",
+    description: "Building Blockchain Analytics & Web3 Data infrastructure.",
+  },
+  {
     date: "Jul 2021 - Aug 2021",
     title: "Web Developer",
     place: "LICET",
