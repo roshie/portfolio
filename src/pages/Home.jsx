@@ -94,12 +94,12 @@ export default class Home extends React.Component {
                       className="text-light ml-md-5 font-mono name text-center text-md-start"
                       style={{ marginTop: "8rem", fontSize: "4rem" }}
                     >
-                      Roshitha
+                      Roshita
                     </div>
                     <div className="text-light ml-md-5 font-mono fs-14 mb-2 typewriter text-center text-md-start">
                       <Typewriter
                         options={{
-                          strings: ["Developer. Coding enthusiast."],
+                          strings: ["Budding DevOps Engineer."],
                           autoStart: true,
                           loop: true,
                         }}
