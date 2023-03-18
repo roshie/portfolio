@@ -35,6 +35,12 @@ const certificates = [
 
 const experiences = [
   {
+    date: "Jan 2023 - Present",
+    title: "DevOps Intern",
+    place: "Tekion Corp",
+    description: "Started my journey here as Budding DevOps Engineer.",
+  },
+  {
     date: "Jul 2022 - Dec 2022",
     title: "Engineer (Intern)",
     place: "BlitzCraftHQ",
@@ -120,18 +126,17 @@ export default function About() {
             <div className="row text-light my-5 font-mono">
               <h1 className="my-4">About</h1>
               <p className="about-content">
-                I'm a Budding Engineer who's fueled by coffee. I'm currently
-                pursuing my Bachelor of Technology in Loyola-ICAM College of
-                Engineering and Technology. Being a Minimalist, I'm always keen
-                on keeping up things simple, organised and well-planned. I love
-                learning and Programming all day and night 🌛.
+                I am a final-year B.Tech student at 
+                Loyola-ICAM College of Engineering and Technology, 
+                  and I am fueled by a passion for programming, with a little help from my trusted companion, coffee ☕. 
+                  As a dedicated minimalist, I value simplicity, organizing ✅, and careful planning 📃 in everything I do.
               </p>
             </div>
             <div className="row text-light mb-5">
               <h3 className="font-mono mb-4"> Skills </h3>
               <div className="my-2 skills">
                 <span>HTML</span> <span>CSS</span> <span>Javascript</span>{" "}
-                <span>Python</span>
+                <span>Python</span><span>Bash Scripting</span>
                 <span>Dart</span> <span>PHP</span> <span>C </span>{" "}
                 <span>Java</span> <span>TypeScript</span>
               </div>
@@ -153,7 +158,7 @@ export default function About() {
                 {/*<span>SQLAlchemy</span>*/}
               </div>
               <div className="my-2 skills">
-                <span>Git</span> <span>GitHub</span> <span>Firebase</span>{" "}
+                <span>Firebase</span>{" "}
                 {/* <span>Supabase</span> */}
                 <span>Postman</span>
                 {/* <span>Wordpress</span> */}
@@ -162,6 +167,13 @@ export default function About() {
                 <span>Premiere Pro</span> <span>Illustrator</span>{" "}
                 <span>Unity</span> <span>IoT</span>
                 <span>Solidity</span>
+              </div>
+              <div className="my-2 skills">
+                <span>Linux</span> <span>AWS</span> <span>Azure</span> <span>Docker</span>{" "}
+                <span>Jenkins</span>
+                <span>Terraform</span>
+                <span>Git</span> <span>GitHub</span>
+                <span>Gitlab</span>
               </div>
             </div>
             <div className="row text-light">
