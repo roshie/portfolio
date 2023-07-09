@@ -35,16 +35,23 @@ const certificates = [
 
 const experiences = [
   {
-    date: "Jan 2023 - Present",
+    date: "Jan 2023 - Jul 2023",
     title: "DevOps Intern",
     place: "Tekion Corp",
-    description: "Started my journey here as Budding DevOps Engineer.",
+    description: "- Actively contributed to the team, utilizing Amazon Web Services, Docker, and \
+    Linux to manage microservices and optimize operations. \
+    \n- Developed Infrastructure-as-Code and automation scripts using Terraform and \
+    Python to streamline operational tasks, increasing efficiency \
+    and reducing manual effort. \
+    \n- Managed CI/CD pipelines in Jenkins, automating the build and \
+    deployment across environments.",
   },
   {
     date: "Jul 2022 - Dec 2022",
     title: "Engineer (Intern)",
     place: "BlitzCraftHQ",
-    description: "Building Blockchain Analytics & Web3 Data infrastructure.",
+    description: "- Collaborated with the team to build a real-time NFT Analytics Platform.\
+    \n- Written Aggregation pipelines to efficiently query data and visualize them through interactive charts.",
   },
   {
     date: "Jul 2021 - Aug 2021",
@@ -124,7 +131,7 @@ export default function About() {
         <motion.div exit="exit" initial="initial" animate="animate">
           <motion.div variants={fadeIn1}>
             <div className="row text-light my-5 font-mono">
-              <h1 className="my-4">About</h1>
+              <h1 className="my-4 mx-1 mx-md-4">About</h1>
               <p className="about-content">
                 I am a final-year B.Tech student at 
                 Loyola-ICAM College of Engineering and Technology, 
