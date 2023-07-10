@@ -46,7 +46,7 @@ const projects = [
       "React-Bootstrap",
     ],
     githubLink: "https://github.com/roshie/bothub-react-fe",
-    siteLink: "https://bothub.vercel.app/",
+    siteLink: "",
   },
   {
     title: "Project Cortex",

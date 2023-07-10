@@ -38,7 +38,7 @@ const experiences = [
     date: "Jan 2023 - Jul 2023",
     title: "DevOps Intern",
     place: "Tekion Corp",
-    description: "- Actively contributed to the team, utilizing Amazon Web Services, Docker, and \
+    description: "Actively contributed to the team, utilizing Amazon Web Services, Docker, and \
     Linux to manage microservices and optimize operations. \
     \n- Developed Infrastructure-as-Code and automation scripts using Terraform and \
     Python to streamline operational tasks, increasing efficiency \
@@ -48,9 +48,9 @@ const experiences = [
   },
   {
     date: "Jul 2022 - Dec 2022",
-    title: "Engineer (Intern)",
+    title: "Full Stack Engineer Intern",
     place: "BlitzCraftHQ",
-    description: "- Collaborated with the team to build a real-time NFT Analytics Platform.\
+    description: "Collaborated with the team to build a real-time NFT Analytics Platform.\
     \n- Written Aggregation pipelines to efficiently query data and visualize them through interactive charts.",
   },
   {

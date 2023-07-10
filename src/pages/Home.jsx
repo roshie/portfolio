@@ -125,7 +125,7 @@ export default class Home extends React.Component {
                         <FontAwesomeIcon icon={faGithub} />
                       </a>
                       <a
-                        href="https://linkedin.com/in/roshitha-rajesh"
+                        href="https://www.linkedin.com/in/roshitha-r"
                         className="socialIcons text-light mx-3 fs-14"
                       >
                         <FontAwesomeIcon icon={faLinkedin} />
