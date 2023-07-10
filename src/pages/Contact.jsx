@@ -46,35 +46,53 @@ export default function Contact() {
         Email: email,
         Name: name,
         Message: message,
-      });
-
-      const dataToSend = {
-        name,
-        email,
-        message,
-      };
-
-      fetch(
-        "https://roshportfolio.azurewebsites.net/api/contactFn?code=Rf5AFPoW4ZEtyrYX4oPBOV5QhT-k5yP44SKpkuttaeLkAzFuvOCQLw==",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            mode: "cors",
-          },
-
-          body: JSON.stringify(dataToSend),
-        }
-      )
+        date: (new Date()).toDateString()
+      })
         .then(() => {
           setMsg({});
           setName("");
           setEmail("");
           setMessage("");
         })
-        .catch((e) => {
-          console.log(e);
-        });
+
+      const dataToSend = {
+        content: `A Message From ${name}`,
+        embeds: [
+          {
+            author: {
+              name: name,
+            },
+            title: email,
+            description: message,
+            color: 11342935,
+            footer: {
+              text: "From https://roshita.tech/",
+            },
+          },
+        ],
+      };
+
+      // fetch(
+      //   "https://roshportfolio.azurewebsites.net/api/contactFn?code=Rf5AFPoW4ZEtyrYX4oPBOV5QhT-k5yP44SKpkuttaeLkAzFuvOCQLw==",
+      //   {
+      //     method: "POST",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //       mode: "cors",
+      //     },
+
+      //     body: JSON.stringify(dataToSend),
+      //   }
+      // )
+      //   .then(() => {
+      //     setMsg({});
+      //     setName("");
+      //     setEmail("");
+      //     setMessage("");
+      //   })
+      //   .catch((e) => {
+      //     console.log(e);
+      //   });
     }
   };
 
@@ -85,7 +103,8 @@ export default function Contact() {
           <motion.div variants={fadeIn1}>
             <div className="row mt-4 mb-2">
               <h1 className="my-4">Contact</h1>
-              <p className="about-content">Get in touch with me!</p>
+              <p className="about-content px-0 px-md-5">I'm Looking for opportunities to showcase my skills in Tech. 
+              Please Drop a message below with your email and I'll reach out to you :)</p>
             </div>
             <div className="d-flex justify-content-center">
               <div className="col-12 col-md-7">
@@ -135,8 +154,8 @@ export default function Contact() {
               </div>
             </div>
             <div className="row mt-4">
-              <h1 className="my-2">Or, Mail me at</h1>
-              <p className="about-content">mail.roshita@gmail.com</p>
+              <h1 className="my-2">Or, Please drop a message at</h1>
+              <a className="about-content" href="mailto:mail.roshita@gmail.com">mail.roshita@gmail.com</a>
               <div className="text-light">
                 <a
                   href="https://twitter.com/roshie_ta"
