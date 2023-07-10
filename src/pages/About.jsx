@@ -140,7 +140,7 @@ export default function About() {
               </p>
             </div>
             <div className="row text-light mb-5">
-              <h3 className="font-mono mb-4"> Skills </h3>
+              <h3 className="font-mono mb-4"> Tools & Tech I've worked in </h3>
               <div className="my-2 skills">
                 <span>HTML</span> <span>CSS</span> <span>Javascript</span>{" "}
                 <span>Python</span><span>Bash Scripting</span>
