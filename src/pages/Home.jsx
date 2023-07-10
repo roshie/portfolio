@@ -131,6 +131,13 @@ export default class Home extends React.Component {
                         <FontAwesomeIcon icon={faLinkedin} />
                       </a>
                     </div>
+                    <div className="text-light ml-md-5 mt-4 text-center text-md-start">
+                      <a href="/about" className="text-light text-decoration-none">About</a> 
+                      <span className="text-light mx-2">•</span>  
+                      <a href="/projects" className="text-light text-decoration-none">Projects</a>
+                      <span className="text-light mx-2">•</span>  
+                      <a href="/contact" className="text-light text-decoration-none">Contact</a> 
+                    </div>
                   </motion.div>
                 </motion.div>
                 {/* >>>>>>> d02684c... Add page loader */}
