@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Menu from "./Menu";
+import { loadingTitle, title } from "../globalStrings";
 import { motion } from "framer-motion";
 import { firebaseApp } from "../firebase";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
@@ -18,7 +19,7 @@ export default function Contact() {
   const [msg, setMsg] = useState({ display: "none" });
 
   useEffect(() => {
-    document.title = "Contact | Roshitha - Portfolio";
+    document.title = `Contact | ${title}`;
   }, []);
 
   const easing = [0.6, -0.05, 0.1, 0.99];
@@ -103,8 +104,7 @@ export default function Contact() {
           <motion.div variants={fadeIn1}>
             <div className="row mt-4 mb-2">
               <h1 className="my-4">Contact</h1>
-              <p className="about-content px-0 px-md-5">I'm Looking for opportunities to showcase my skills in Tech. 
-              Please Drop a message below with your email and I'll reach out to you :)</p>
+              <p className="about-content px-0 px-md-5">Please Drop a message below with your email and I'll reach out to you :)</p>
             </div>
             <div className="d-flex justify-content-center">
               <div className="col-12 col-md-7">

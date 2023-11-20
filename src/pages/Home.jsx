@@ -99,7 +99,7 @@ export default class Home extends React.Component {
                     <div className="text-light ml-md-5 font-mono fs-14 mb-2 typewriter text-center text-md-start">
                       <Typewriter
                         options={{
-                          strings: ["Budding Engineer."],
+                          strings: ["An Undergrad.", "Code Artisan."],
                           autoStart: true,
                           loop: true,
                         }}
@@ -140,7 +140,6 @@ export default class Home extends React.Component {
                     </div>
                   </motion.div>
                 </motion.div>
-                {/* >>>>>>> d02684c... Add page loader */}
               </div>
             </Menu>
           </motion.div>

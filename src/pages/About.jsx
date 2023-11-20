@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Menu from "./Menu";
+import { loadingTitle, title } from "../globalStrings";
 import { motion } from "framer-motion";
 import {
   VerticalTimeline,
@@ -35,15 +36,21 @@ const certificates = [
 
 const experiences = [
   {
+    date: "Sep 2023 - Present",
+    title: "Member of Technical Staff - DevOps",
+    place: "Zoho Corporation",
+    description: "",
+  },
+  {
     date: "Jan 2023 - Jul 2023",
-    title: "DevOps Intern",
+    title: "Associate DevOps Engineer - Intern",
     place: "Tekion Corp",
     description: "Actively contributed to the team, utilizing Amazon Web Services, Docker, and \
     Linux to manage microservices and optimize operations. \
-    \n- Developed Infrastructure-as-Code and automation scripts using Terraform and \
+    \n - Developed Infrastructure-as-Code and automation scripts using Terraform and \
     Python to streamline operational tasks, increasing efficiency \
     and reducing manual effort. \
-    \n- Managed CI/CD pipelines in Jenkins, automating the build and \
+    \n - Managed CI/CD pipelines in Jenkins, automating the build and \
     deployment across environments.",
   },
   {
@@ -54,28 +61,17 @@ const experiences = [
     \n- Written Aggregation pipelines to efficiently query data and visualize them through interactive charts.",
   },
   {
-    date: "Jul 2021 - Aug 2021",
-    title: "Web Developer",
-    place: "LICET",
-    description: "Developed a portal for a mentorship program.",
-  },
-  {
     date: "Feb 2021 - Jul 2021",
     title: "SDE Intern",
     place: "Onfluence, UK",
     description: "Played a role in the team as Backend developer.",
   },
   {
-    date: "Jul 2021 - Aug 2021",
-    title: "Full Stack Developer Intern",
-    place: "Zue Technologies",
-    description: "Built a landing site and an application for their New Startup.",
-  },
-  {
     date: "Aug 2020 - Oct 2020",
-    title: "Web Developer",
+    title: "Crewman | Developer",
     place: "Pattarai",
-    description: "Developed a module in an ERP suite.",
+    description: "Worked on real-time projects, in diverse range of domains, \
+    which include Mobile App development, Web Development, Internet of Things (IoT), Web3 and Graphic Design.",
   },
 ];
 
@@ -83,7 +79,7 @@ export default function About() {
   const [badges, setBadges] = useState([]);
 
   useEffect(() => {
-    document.title = "About | Roshitha - Portfolio";
+    document.title = `About | ${title}`;
 
     fetch(
       "https://roshportfolio.azurewebsites.net/api/getBadges?code=uxo4MXpbgItnmzlf8rrCXO-vc82Fo7IVWaQYkOa6J2ScAzFu9Im18Q==",
@@ -130,13 +126,11 @@ export default function About() {
       <div className="d-flex flex-column justify-content-center text-center p-5">
         <motion.div exit="exit" initial="initial" animate="animate">
           <motion.div variants={fadeIn1}>
-            <div className="row text-light my-5 font-mono">
+            <div className="text-light my-5 font-mono">
               <h1 className="my-4 mx-1 mx-md-4">About</h1>
-              <p className="about-content">
-                I am a final-year B.Tech student at 
-                Loyola-ICAM College of Engineering and Technology, 
-                  and I am fueled by a passion for programming, with a little help from my trusted companion, coffee ☕. 
-                  As a dedicated minimalist, I value simplicity, organizing ✅, and careful planning 📃 in everything I do.
+              <p className="about-content mx-5">
+              A recent graduate from Loyola-ICAM College of Engineering and Technology, fueled by a passion for programming. 
+              As a dedicated minimalist, I value simplicity, organization ✅, and careful planning 📃 in everything I do
               </p>
             </div>
             <div className="row text-light mb-5">
@@ -151,17 +145,18 @@ export default function About() {
                 <span>Bootstrap</span> <span>Material UI</span>{" "}
                 <span>Tailwind CSS</span> <span>Jquery</span> <span>Flask</span>
                 <span>Django</span> <span>FastAPI</span> <span>Flutter</span>{" "}
-                <span>Android</span> <span>Redux</span>
+                <span>Android</span> 
               </div>
               <div className="my-2 skills">
                 <span>ReactJS</span>
                 {/* <span>Angular</span> */}
-                <span>NodeJS</span> <span>ExpressJS</span> <span>NextJS</span>
+                <span>NodeJS</span><span>Redux</span> <span>ExpressJS</span> <span>NextJS</span>
                 <span>MySQL</span>
                 <span>MongoDB</span>
                 <span>PostgreSQL</span>
                 <span>Firestore</span>
                 <span>GraphQL</span>
+                <span>Elasticsearch</span>
                 {/*<span>SQLAlchemy</span>*/}
               </div>
               <div className="my-2 skills">
@@ -179,8 +174,50 @@ export default function About() {
                 <span>Linux</span> <span>AWS</span> <span>Azure</span> <span>Docker</span>{" "}
                 <span>Jenkins</span>
                 <span>Terraform</span>
+                <span>Kubernetes</span>
                 <span>Git</span> <span>GitHub</span>
                 <span>Gitlab</span>
+              </div>
+            </div>
+
+            {/* <Disk
+              style={{
+                opacity: 0.1,
+                zIndex: 0,
+                right: 0,
+                transform: "scale(4) translate(50%,10%)",
+              }}
+            /> */}
+            <div className="row text-light">
+              <h3 className="font-mono"> Experience </h3>
+              <div className="timeline text-start">
+                <VerticalTimeline>
+                  {experiences.map((exp) => {
+                    return (
+                      <VerticalTimelineElement
+                        className="font-mono"
+                        contentStyle={{
+                          background: "#131313",
+                          color: "#fff",
+                          border: "none",
+                        }}
+                        style={{
+                          border: "none",
+                        }}
+                        contentArrowStyle={{ borderRight: "7px solid  white" }}
+                        date={exp.date}
+                        iconStyle={{ background: "#131313", color: "#fff" }}
+                        icon={<FontAwesomeIcon icon={faBriefcase} />}
+                      >
+                        <h3 className="font-weight-bold my-3">{exp.title}</h3>
+                        <h5 className="vertical-timeline-element-subtitle">
+                          {exp.place}
+                        </h5>
+                        <p>{exp.description}</p>
+                      </VerticalTimelineElement>
+                    );
+                  })}
+                </VerticalTimeline>
               </div>
             </div>
             <div className="row text-light">
@@ -234,47 +271,7 @@ export default function About() {
                 </VerticalTimeline>
               </div>
             </div>
-            {/* <Disk
-              style={{
-                opacity: 0.1,
-                zIndex: 0,
-                right: 0,
-                transform: "scale(4) translate(50%,10%)",
-              }}
-            /> */}
-            <div className="row text-light">
-              <h3 className="font-mono"> Experience </h3>
-              <div className="timeline text-start">
-                <VerticalTimeline>
-                  {experiences.map((exp) => {
-                    return (
-                      <VerticalTimelineElement
-                        className="font-mono"
-                        contentStyle={{
-                          background: "#131313",
-                          color: "#fff",
-                          border: "none",
-                        }}
-                        style={{
-                          border: "none",
-                        }}
-                        contentArrowStyle={{ borderRight: "7px solid  white" }}
-                        date={exp.date}
-                        iconStyle={{ background: "#131313", color: "#fff" }}
-                        icon={<FontAwesomeIcon icon={faBriefcase} />}
-                      >
-                        <h3 className="font-weight-bold my-3">{exp.title}</h3>
-                        <h5 className="vertical-timeline-element-subtitle">
-                          {exp.place}
-                        </h5>
-                        <p>{exp.description}</p>
-                      </VerticalTimelineElement>
-                    );
-                  })}
-                </VerticalTimeline>
-              </div>
-            </div>
-            <div className="row text-light">
+            {/* <div className="row text-light">
               <h3 className="font-mono"> Certifications </h3>
               <div className="timeline text-start">
                 <VerticalTimeline layout="1-column-left">
@@ -294,7 +291,7 @@ export default function About() {
                   })}
                 </VerticalTimeline>
               </div>
-            </div>
+            </div> */}
             <div className="row text-light">
               <h6 className="font-mono"> Also View my profile in </h6>
               <div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Menu from "./Menu";
+import { loadingTitle, title } from "../globalStrings";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -159,7 +160,7 @@ export default function Projects() {
     },
   };
   useEffect(() => {
-    document.title = "Projects | Roshitha - Portfolio";
+    document.title = `Projects | ${title}`;
   }, []);
 
   const projectGenerator = function* () {
@@ -177,7 +178,7 @@ export default function Projects() {
             <div className="row text-light my-5 font-mono">
               <h1 className="my-4">Projects</h1>
               <p className="about-content">
-                Here is a list of Projects I've worked.
+                Here is a bunch of Projects I've worked.
               </p>
             </div>
           </motion.div>

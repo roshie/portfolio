@@ -1,2 +1,2 @@
-export const title = "Roshita - Engineer";
+export const title = "Roshita - Devfolio";
 export const loadingTitle = "Loading...";
