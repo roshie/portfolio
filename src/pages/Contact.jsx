@@ -56,44 +56,25 @@ export default function Contact() {
           setMessage("");
         })
 
-      const dataToSend = {
-        content: `A Message From ${name}`,
-        embeds: [
-          {
-            author: {
-              name: name,
-            },
-            title: email,
-            description: message,
-            color: 11342935,
-            footer: {
-              text: "From https://roshita.tech/",
-            },
+      fetch(
+        `https://portfolio-be-six.vercel.app/api/contact?name=${name}&email=${email}&message=${message}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            mode: "cors",
           },
-        ],
-      };
-
-      // fetch(
-      //   "https://roshportfolio.azurewebsites.net/api/contactFn?code=Rf5AFPoW4ZEtyrYX4oPBOV5QhT-k5yP44SKpkuttaeLkAzFuvOCQLw==",
-      //   {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //       mode: "cors",
-      //     },
-
-      //     body: JSON.stringify(dataToSend),
-      //   }
-      // )
-      //   .then(() => {
-      //     setMsg({});
-      //     setName("");
-      //     setEmail("");
-      //     setMessage("");
-      //   })
-      //   .catch((e) => {
-      //     console.log(e);
-      //   });
+        }
+      )
+        .then(() => {
+          setMsg({});
+          setName("");
+          setEmail("");
+          setMessage("");
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     }
   };
 
