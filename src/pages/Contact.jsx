@@ -57,14 +57,7 @@ export default function Contact() {
         })
 
       fetch(
-        `https://portfolio-be-six.vercel.app/api/contact?name=${name}&email=${email}&message=${message}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            mode: "cors",
-          },
-        }
+        `https://portfolio-be-six.vercel.app/api/contact?name=${name}&email=${email}&message=${message}`
       )
         .then(() => {
           setMsg({});
