@@ -1,2 +1,2 @@
-export const title = "Roshita - Devfolio";
+export const title = "Roshita - Portfolio";
 export const loadingTitle = "Loading...";
