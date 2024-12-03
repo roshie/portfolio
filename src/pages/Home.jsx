@@ -99,7 +99,7 @@ export default class Home extends React.Component {
                     <div className="text-light ml-md-5 font-mono fs-14 mb-2 typewriter text-center text-md-start">
                       <Typewriter
                         options={{
-                          strings: ["An Undergrad.", "Code Artisan."],
+                          strings: ["An Engineer Building Solutions with Code."],
                           autoStart: true,
                           loop: true,
                         }}
