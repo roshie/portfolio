@@ -133,53 +133,7 @@ export default function About() {
               As a dedicated minimalist, I value simplicity, organization ✅, and careful planning 📃 in everything I do
               </p>
             </div>
-            <div className="row text-light mb-5">
-              <h3 className="font-mono mb-4"> Tools & Tech I've worked in </h3>
-              <div className="my-2 skills">
-                <span>HTML</span> <span>CSS</span> <span>Javascript</span>{" "}
-                <span>Python</span><span>Bash Scripting</span>
-                <span>Dart</span> <span>PHP</span> <span>C </span>{" "}
-                <span>Java</span> <span>TypeScript</span>
-              </div>
-              <div className="my-2 skills">
-                <span>Bootstrap</span> <span>Material UI</span>{" "}
-                <span>Tailwind CSS</span> <span>Jquery</span> <span>Flask</span>
-                <span>Django</span> <span>FastAPI</span> <span>Flutter</span>{" "}
-                <span>Android</span> 
-              </div>
-              <div className="my-2 skills">
-                <span>ReactJS</span>
-                {/* <span>Angular</span> */}
-                <span>NodeJS</span><span>Redux</span> <span>ExpressJS</span> <span>NextJS</span>
-                <span>MySQL</span>
-                <span>MongoDB</span>
-                <span>PostgreSQL</span>
-                <span>Firestore</span>
-                <span>GraphQL</span>
-                <span>Elasticsearch</span>
-                {/*<span>SQLAlchemy</span>*/}
-              </div>
-              <div className="my-2 skills">
-                <span>Firebase</span>{" "}
-                {/* <span>Supabase</span> */}
-                <span>Postman</span>
-                {/* <span>Wordpress</span> */}
-                <span>Figma</span>
-                <span>Adobe XD</span> <span>Photoshop</span>{" "}
-                <span>Premiere Pro</span> <span>Illustrator</span>{" "}
-                <span>Unity</span> <span>IoT</span>
-                <span>Solidity</span>
-              </div>
-              <div className="my-2 skills">
-                <span>Linux</span> <span>AWS</span> <span>Azure</span> <span>Docker</span>{" "}
-                <span>Jenkins</span>
-                <span>Terraform</span>
-                <span>Kubernetes</span>
-                <span>Git</span> <span>GitHub</span>
-                <span>Gitlab</span>
-              </div>
-            </div>
-
+            
             {/* <Disk
               style={{
                 opacity: 0.1,
@@ -271,6 +225,50 @@ export default function About() {
                 </VerticalTimeline>
               </div>
             </div>
+            <div className="row text-light mb-5">
+              <h3 className="font-mono mb-4"> Tools & Tech I've worked in </h3>
+              <div className="my-2 skills">
+                <span>HTML</span> <span>CSS</span> <span>Javascript</span>{" "}
+                <span>Python</span><span>Bash Scripting</span>
+                <span>C </span> <span>Java</span> <span>TypeScript</span>
+              </div>
+              <div className="my-2 skills">
+                <span>Bootstrap</span> <span>Material UI</span>{" "}
+                <span>Tailwind CSS</span> <span>Jquery</span> <span>Flask</span>
+                <span>Django</span> <span>FastAPI</span> <span>Flutter</span>{" "}
+                <span>Android</span> 
+              </div>
+              <div className="my-2 skills">
+                <span>ReactJS</span>
+                {/* <span>Angular</span> */}
+                <span>NodeJS</span><span>Redux</span> <span>ExpressJS</span> <span>NextJS</span>
+                <span>MySQL</span>
+                <span>MongoDB</span>
+                <span>PostgreSQL</span>
+                <span>Firestore</span>
+                <span>GraphQL</span>
+                {/*<span>SQLAlchemy</span>*/}
+              </div>
+              <div className="my-2 skills">
+                <span>Firebase</span>{" "}
+                {/* <span>Supabase</span> */}
+                <span>Postman</span>
+                {/* <span>Wordpress</span> */}
+                <span>Figma</span>
+                <span>Adobe XD</span> <span>Photoshop</span>{" "}
+                <span>Premiere Pro</span> <span>Illustrator</span>{" "}
+                <span>IoT</span>
+                <span>Solidity</span>
+              </div>
+              <div className="my-2 skills">
+                <span>Linux</span> <span>AWS</span> <span>Azure</span> <span>Docker</span>{" "}
+                <span>Jenkins</span>
+                <span>Terraform</span>
+                <span>Git</span> <span>GitHub</span>
+                <span>Gitlab</span>
+              </div>
+            </div>
+
             {/* <div className="row text-light">
               <h3 className="font-mono"> Certifications </h3>
               <div className="timeline text-start">
@@ -292,7 +290,7 @@ export default function About() {
                 </VerticalTimeline>
               </div>
             </div> */}
-            <div className="row text-light">
+{/*             <div className="row text-light">
               <h6 className="font-mono"> Also View my profile in </h6>
               <div>
                 <a href="https://leetcode.com/roshithaignatius21/">
@@ -326,7 +324,7 @@ export default function About() {
                       </div>
                     );
                   })}
-                </div>
+                </div> */}
               </div>
             )}
           </motion.div>
